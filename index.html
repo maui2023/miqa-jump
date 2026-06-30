@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miqa Jump - Game Platformer Antigraviti 2.5D</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts untuk tipografi premium -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Kanvas Three.js untuk Render 3D -->
+    <canvas id="game-canvas"></canvas>
+
+    <!-- Overlay UI Permainan -->
+    <div class="ui-container">
+        <!-- Kad Skor (Top Navigation with Overlapping Header Card) -->
+        <header class="score-card glass-panel">
+            <div class="score-label">SKOR</div>
+            <div id="score-val">0</div>
+        </header>
+
+        <!-- Skrin Game Over (Tersembunyi secara lalai) -->
+        <div id="game-over-screen" class="game-over-overlay hidden">
+            <div class="game-over-card glass-panel">
+                <h1 class="game-over-title">GAME OVER</h1>
+                <p class="game-over-info">Anda telah terjatuh dari platform!</p>
+                <div class="restart-prompt">
+                    Tekan <span class="key-badge">R</span> Untuk Mula Semula
+                </div>
+            </div>
+        </div>
+
+        <!-- Panduan Kawalan Ringkas di bahagian bawah -->
+        <footer class="controls-guide glass-panel">
+            <span>Kiri: <span class="key-badge">A</span> / <span class="key-badge">←</span></span>
+            <span>Kanan: <span class="key-badge">D</span> / <span class="key-badge">→</span></span>
+            <span>Lompat (Terapung): <span class="key-badge">Space</span></span>
+        </footer>
+    </div>
+
+    <!-- Import Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Fail Logik Permainan -->
+    <script src="script.js"></script>
+</body>
+</html>
